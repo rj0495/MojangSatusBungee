@@ -23,6 +23,7 @@ public class MojangStatusBungee extends Plugin
     public void onEnable()
     {
         System.out.println("MojangStatus by mr_splash");
+        System.out.println("MojangStatus by mr_splash");
         registerCommands();
         loadcfg();
         pingScheduler.run();
