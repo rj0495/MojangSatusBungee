@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MojangStatusBungee">
+    <output-path>$PROJECT_DIR$/../../Viel Zeug/PlayCade Netzwerk/bungeecord_3777/plugins</output-path>
+    <root id="archive" name="MojangStatusBungee.jar">
+      <element id="module-output" name="MojangSatusBungee" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>

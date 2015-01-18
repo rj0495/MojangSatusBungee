@@ -1,0 +1,6 @@
+name: MojangStatus
+author: mr_splash
+version: 0.1-SNAPSHOT
+
+main: de.mr_splash.MojangStatusBungee.MojangStatusBungee
+

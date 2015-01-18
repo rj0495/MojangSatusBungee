@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SpigotNEWEST">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../CraftBukkit/SpigotNEWEST.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../CraftBukkit/SpigotNEWEST.jar!/" />
+    </SOURCES>
+  </library>
+</component>
