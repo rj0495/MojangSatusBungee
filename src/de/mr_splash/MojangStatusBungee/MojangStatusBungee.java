@@ -22,6 +22,7 @@ public class MojangStatusBungee extends Plugin
     public checkScheduler checkscheduler = new checkScheduler(this);
     public void onEnable()
     {
+        System.out.println("MojangStatus by mr_splash");
         registerCommands();
         loadcfg();
         pingScheduler.run();
