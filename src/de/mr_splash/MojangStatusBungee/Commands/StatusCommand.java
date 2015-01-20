@@ -24,11 +24,8 @@ public class StatusCommand extends Command
         {
             ProxiedPlayer p = (ProxiedPlayer) commandSender;
             p.sendMessage(onlineMessage(plugin.ping.accounts, Adress.ACCOUNTS.Service));
-            p.sendMessage(onlineMessage(plugin.ping.auth, Adress.AUTHENTICATION.Service));
             p.sendMessage(onlineMessage(plugin.ping.authServer, Adress.AUTHENTICATION_SERVER.Service));
-            p.sendMessage(onlineMessage(plugin.ping.login, Adress.LOGIN.Service));
             p.sendMessage(onlineMessage(plugin.ping.session_minecraft, Adress.SESSION_MINECRAFT.Service));
-            p.sendMessage(onlineMessage(plugin.ping.session_mojang, Adress.SESSION_MOJANG.Service));
             p.sendMessage(onlineMessage(plugin.ping.skins, Adress.SKINS.Service));
             p.sendMessage(onlineMessage(plugin.ping.website, Adress.MAIN_WEBSITE.Service));
         }

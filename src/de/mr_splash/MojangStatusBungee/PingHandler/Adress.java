@@ -4,13 +4,10 @@ public enum Adress
 {
 
     ACCOUNTS("Accounts Service", "account.mojang.com"),
-    AUTHENTICATION("Authentication Service", "auth.mojang.com"),
     AUTHENTICATION_SERVER("Authentication Server", "authserver.mojang.com"),
-    LOGIN("Login Service", "login.minecraft.net"),
     SESSION_MINECRAFT("Minecraft Session Server", "session.minecraft.net"),
-    SESSION_MOJANG("Mojang Session Server", "sessionserver.mojang.com"),
     SKINS("Skin Server", "skins.minecraft.net"),
-    MAIN_WEBSITE("Main Site", "minecraft.net");
+    MAIN_WEBSITE("Website & Login Server", "minecraft.net");
 
     public String Service;
     public String Domain;

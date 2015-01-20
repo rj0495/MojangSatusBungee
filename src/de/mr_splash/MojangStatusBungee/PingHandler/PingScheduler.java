@@ -29,13 +29,10 @@ public class PingScheduler
     private void pingAll()
     {
         mojangStatusBungee.ping.accountsOnline();
-        mojangStatusBungee.ping.authOnline();
         mojangStatusBungee.ping.authServerOnline();
         mojangStatusBungee.ping.minecraftSessionOnline();
-        mojangStatusBungee.ping.mojangSessinOnline();
         mojangStatusBungee.ping.skinsOnline();
         mojangStatusBungee.ping.minecraftWebsiteOnline();
-        mojangStatusBungee.ping.login();
     }
 
 }

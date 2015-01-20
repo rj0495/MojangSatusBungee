@@ -4,6 +4,7 @@ import de.mr_splash.MojangStatusBungee.Commands.StatusCommand;
 import de.mr_splash.MojangStatusBungee.PingHandler.Ping;
 import de.mr_splash.MojangStatusBungee.PingHandler.PingScheduler;
 import de.mr_splash.MojangStatusBungee.PingHandler.checkScheduler;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
@@ -16,7 +17,7 @@ import java.io.IOException;
 public class MojangStatusBungee extends Plugin
 {
 
-
+    public String message;
     public Ping  ping = new Ping();
     public PingScheduler pingScheduler = new PingScheduler(this);
     public checkScheduler checkscheduler = new checkScheduler(this);
@@ -52,9 +53,10 @@ public class MojangStatusBungee extends Plugin
             Configuration configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
             if (configuration.get("offline_message") == null)
             {
-                configuration.set("offline_message", "&c&lATTENTION! The service %service% is OFFLINE! Type /mojangstatus!");
+                configuration.set("offline_message", "&c&lATTENTION! The service &6%service% &cis OFFLINE! &7Type /mojangstatus!");
                 ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, file);
             }
+            message = ChatColor.translateAlternateColorCodes('&', configuration.getString("offline_message"));
         }
         catch (IOException e)
         {
