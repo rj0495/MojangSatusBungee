@@ -32,7 +32,7 @@ public class checkScheduler
                     message(mojangStatusBungee.ping.website, Adress.MAIN_WEBSITE.Service, p);
                 }
             }
-        }, 10, 60*5, TimeUnit.SECONDS);
+        }, 10, 60*mojangStatusBungee.check_delay, TimeUnit.SECONDS);
     }
 
     private void message(boolean serviceB, String service, ProxiedPlayer p)

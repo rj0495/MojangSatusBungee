@@ -23,7 +23,7 @@ public class PingScheduler
             {
                 pingAll();
             }
-        }, 1, 60*5, TimeUnit.SECONDS);
+        }, 1, 60*mojangStatusBungee.ping_delay, TimeUnit.SECONDS);
     }
 
     private void pingAll()

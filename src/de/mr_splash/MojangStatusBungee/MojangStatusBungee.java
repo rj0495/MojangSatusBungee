@@ -18,9 +18,13 @@ public class MojangStatusBungee extends Plugin
 {
 
     public String message;
+    public int ping_delay;
+    public int check_delay;
+
     public Ping  ping = new Ping();
     public PingScheduler pingScheduler = new PingScheduler(this);
     public checkScheduler checkscheduler = new checkScheduler(this);
+
     public void onEnable()
     {
         System.out.println("MojangStatus by mr_splash");
@@ -56,6 +60,18 @@ public class MojangStatusBungee extends Plugin
                 configuration.set("offline_message", "&c&lATTENTION! The service &6%service% &cis OFFLINE! &7Type /mojangstatus!");
                 ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, file);
             }
+            if (configuration.get("ping_delay") == null)
+            {
+                configuration.set("ping_delay", 5);
+                ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, file);
+            }
+            if(configuration.get("check_delay") == null)
+            {
+                configuration.set("check_delay", 5);
+                ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, file);
+            }
+            ping_delay = configuration.getInt("ping_delay");
+            check_delay = configuration.getInt("check_delay");
             message = ChatColor.translateAlternateColorCodes('&', configuration.getString("offline_message"));
         }
         catch (IOException e)
